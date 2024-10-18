@@ -1,0 +1,226 @@
+   EPI  ECO  BDH  SPI  AGR                    region
+1 30.7 31.2 32.1  9.1 41.1             Southern Asia
+2 52.1 51.8 50.6 56.8 50.4            Eastern Europe
+3 41.9 42.2 33.0 73.8 46.7       Greater Middle East
+4 39.7 43.2 41.5 37.1 41.0        Sub-Saharan Africa
+5 55.5 53.2 52.8 19.9 31.4 Latin America & Caribbean
+6 46.8 47.1 35.0 32.9 81.4 Latin America & Caribbean
+
+KNNpred                     5 11.4 12.5 13.4 14.6 16.2 16.8 20.2 25.9 26 26.5 30.4
+  Asia-Pacific              1    1    1    1    1    1    1    1    0  1    0    0
+  Eastern Europe            0    0    0    0    0    0    0    0    0  0    0    0
+  Former Soviet States      0    0    0    0    0    0    0    0    0  0    0    0
+  Global West               0    0    0    0    0    0    0    0    0  0    0    0
+  Greater Middle East       0    0    0    0    0    0    0    0    0  0    0    1
+  Latin America & Caribbean 0    0    0    0    0    0    0    0    1  0    0    0
+  Southern Asia             0    0    0    0    0    0    0    0    0  0    0    0
+  Sub-Saharan Africa        0    0    0    0    0    0    0    0    0  0    1    0
+                           
+KNNpred                     30.6 31.4 31.5 32.1 33 36.8 38.9 40.1 42.5 45.4 46 46.2
+  Asia-Pacific                 0    0    0    0  0    0    0    0    1    0  0    0
+  Eastern Europe               0    0    0    0  0    0    0    0    0    0  0    0
+  Former Soviet States         0    0    0    0  1    0    1    0    0    1  0    1
+  Global West                  0    0    0    0  0    0    0    0    0    0  0    0
+  Greater Middle East          0    0    0    0  0    0    0    1    0    0  0    0
+  Latin America & Caribbean    0    1    0    0  0    0    0    0    0    0  0    0
+  Southern Asia                0    0    0    0  0    0    0    0    0    0  0    0
+  Sub-Saharan Africa           1    0    1    1  0    1    0    0    0    0  2    0
+                           
+KNNpred                     46.8 47.4 49.9 50.6 51 51.7 52.1 52.8 54.2 55.4 56.3
+  Asia-Pacific                 0    0    0    0  0    0    0    0    0    0    0
+  Eastern Europe               0    0    0    0  0    0    0    1    0    0    0
+  Former Soviet States         0    1    0    0  0    0    0    0    0    0    0
+  Global West                  0    0    0    0  0    0    1    0    0    1    0
+  Greater Middle East          0    0    0    0  0    0    0    0    0    0    0
+  Latin America & Caribbean    1    0    0    1  0    0    0    0    0    0    0
+  Southern Asia                0    0    0    0  0    0    0    0    0    0    0
+  Sub-Saharan Africa           0    0    1    0  1    1    0    0    1    0    1
+                           
+KNNpred                     56.5 57 58.4 59.3 60.4 61 61.3 62.2 62.7 63.9 64.3 64.8
+  Asia-Pacific                 0  0    0    0    0  0    0    0    0    0    0    0
+  Eastern Europe               0  0    0    0    0  0    0    0    0    0    0    0
+  Former Soviet States         0  0    0    0    0  0    0    0    0    0    1    0
+  Global West                  0  0    0    0    1  1    0    0    1    0    0    1
+  Greater Middle East          0  0    0    0    0  0    0    0    0    1    0    0
+  Latin America & Caribbean    0  1    1    1    0  0    1    1    0    0    0    0
+  Southern Asia                0  0    0    0    0  0    0    0    0    0    0    0
+  Sub-Saharan Africa           1  0    0    0    0  0    0    0    0    0    0    0
+                           
+KNNpred                     67 67.2 67.7 74.4 78.7 78.8 84.9
+  Asia-Pacific               0    0    0    0    0    0    0
+  Eastern Europe             1    0    0    1    1    0    1
+  Former Soviet States       0    0    0    0    0    0    0
+  Global West                0    0    1    0    0    1    0
+  Greater Middle East        0    0    0    0    0    0    0
+  Latin America & Caribbean  0    0    0    0    0    0    0
+  Southern Asia              0    0    0    0    0    0    0
+  Sub-Saharan Africa         0    1    0    0    0    0    0
+
+> contingency.matrix = as.matrix(contingency.table)
+> sum(diag(contingency.matrix))/length(x_test$BDH)
+[1] 0.01818182
+
+KNNpred                     25.1 27.6 30 30.5 31.2 33.1 34.3 34.9 35 36.8 36.9 37.2
+  Asia-Pacific                 1    1  0    1    0    1    1    1  1    0    1    0
+  Eastern Europe               0    0  0    0    0    0    0    0  0    0    0    0
+  Former Soviet States         0    0  0    0    0    0    0    0  0    0    0    0
+  Global West                  0    0  0    0    0    0    0    0  0    0    0    0
+  Greater Middle East          0    0  0    0    0    0    0    0  0    0    0    0
+  Latin America & Caribbean    0    0  0    0    0    0    0    0  0    0    0    1
+  Southern Asia                0    0  0    0    0    0    0    0  0    0    0    0
+  Sub-Saharan Africa           0    0  1    0    1    0    0    0  0    1    0    0
+                           
+KNNpred                     38.6 38.9 39.3 40.7 42.2 44.5 44.8 45 45.9 48.1 48.9 49
+  Asia-Pacific                 1    0    0    0    0    0    0  0    0    0    0  0
+  Eastern Europe               0    0    0    0    0    0    0  0    0    0    0  0
+  Former Soviet States         0    0    0    0    1    0    0  0    0    0    1  0
+  Global West                  0    0    0    0    0    0    0  0    0    0    0  0
+  Greater Middle East          0    0    0    1    0    0    0  0    0    0    0  0
+  Latin America & Caribbean    0    0    0    0    0    0    0  1    0    0    0  0
+  Southern Asia                0    0    0    0    0    0    0  0    0    0    0  0
+  Sub-Saharan Africa           1    1    1    0    0    1    1  0    1    1    1  1
+                           
+KNNpred                     49.7 49.8 50.3 50.8 50.9 51.8 53.2 53.9 57.3 58.4 59.1
+  Asia-Pacific                 0    0    0    0    0    0    0    0    0    1    0
+  Eastern Europe               0    0    0    0    0    0    1    0    0    0    0
+  Former Soviet States         1    0    1    1    0    0    0    0    0    0    0
+  Global West                  0    0    0    0    0    0    0    0    0    0    0
+  Greater Middle East          0    1    0    0    0    0    0    0    0    0    0
+  Latin America & Caribbean    0    0    0    0    0    1    0    1    1    0    1
+  Southern Asia                0    0    0    0    0    0    0    0    0    0    0
+  Sub-Saharan Africa           0    0    0    0    1    0    0    0    0    0    0
+                           
+KNNpred                     59.5 60.6 61 63.3 63.4 63.5 63.8 63.9 64.8 65.5 67.7
+  Asia-Pacific                 0    0  0    0    0    0    0    0    0    0    0
+  Eastern Europe               0    0  0    0    0    0    0    0    0    0    0
+  Former Soviet States         0    0  0    0    0    0    0    1    0    0    0
+  Global West                  0    1  0    1    1    0    0    0    0    1    1
+  Greater Middle East          0    0  0    0    0    0    0    0    1    0    0
+  Latin America & Caribbean    0    0  1    0    0    1    1    0    0    0    0
+  Southern Asia                0    0  0    0    0    0    0    0    0    0    0
+  Sub-Saharan Africa           1    0  0    0    0    0    0    0    0    0    0
+                           
+KNNpred                     67.8 67.9 73.8 76.6 78 78.2 83.6
+  Asia-Pacific                 0    0    0    0  0    0    0
+  Eastern Europe               0    0    1    0  1    1    1
+  Former Soviet States         0    0    0    0  0    0    0
+  Global West                  1    1    0    1  0    0    0
+  Greater Middle East          0    0    0    0  0    0    0
+  Latin America & Caribbean    0    0    0    0  0    0    0
+  Southern Asia                0    0    0    0  0    0    0
+  Sub-Saharan Africa           0    0    0    0  0    0    0
+> contingency.matrix = as.matrix(contingency.table)
+> sum(diag(contingency.matrix))/length(x_test$ECO)
+[1] 0.01818182
+> 
+> contingency.table <- table(KNNpred, x_test$SPI)
+> contingency.table
+                           
+KNNpred                     0 0.9 1.2 3.7 3.8 7.5 8.2 9.1 11 12.8 15 19.9 21.2 21.6
+  Asia-Pacific              2   1   1   1   1   1   0   0  1    1  0    0    0    0
+  Eastern Europe            0   0   0   0   0   0   0   0  0    0  0    1    0    0
+  Former Soviet States      0   0   0   0   0   0   0   0  0    0  0    0    0    0
+  Global West               0   0   0   0   0   0   0   0  0    0  0    0    0    0
+  Greater Middle East       0   0   0   0   0   0   0   0  0    0  0    0    0    0
+  Latin America & Caribbean 0   0   0   0   0   0   1   0  0    0  0    0    0    1
+  Southern Asia             0   0   0   0   0   0   0   0  0    0  0    0    0    0
+  Sub-Saharan Africa        0   0   0   0   0   0   0   1  0    0  1    0    1    0
+                           
+KNNpred                     32.4 33 33.6 34.6 34.8 37 37.3 40.5 43.2 44.7 51.4 54.9
+  Asia-Pacific                 0  0    1    0    0  0    0    0    0    0    0    0
+  Eastern Europe               0  0    0    0    0  0    0    0    0    0    0    0
+  Former Soviet States         1  0    0    0    0  0    0    0    0    0    0    1
+  Global West                  0  0    0    1    0  0    0    1    0    0    0    0
+  Greater Middle East          0  0    0    0    1  0    0    0    0    0    0    0
+  Latin America & Caribbean    0  0    0    0    0  0    1    0    0    0    0    0
+  Southern Asia                0  0    0    0    0  0    0    0    0    0    0    0
+  Sub-Saharan Africa           0  1    0    0    0  1    0    0    1    1    1    0
+                           
+KNNpred                     56.5 56.8 57.9 58.3 61.9 65.2 65.8 67.8 68.2 69.6 70.2
+  Asia-Pacific                 0    0    0    0    0    0    0    0    0    0    0
+  Eastern Europe               0    0    0    0    0    0    0    0    0    0    0
+  Former Soviet States         0    0    0    1    0    0    0    0    0    0    1
+  Global West                  1    0    0    0    0    1    1    0    0    0    0
+  Greater Middle East          0    0    1    0    0    0    0    0    0    0    0
+  Latin America & Caribbean    0    1    0    0    0    0    0    0    0    1    0
+  Southern Asia                0    0    0    0    0    0    0    0    0    0    0
+  Sub-Saharan Africa           0    0    0    0    1    0    0    1    1    0    0
+                           
+KNNpred                     71.8 73.8 78.2 79.4 82.1 83.3 83.6 84.4 87.1 88.6 89.6
+  Asia-Pacific                 0    0    0    0    0    0    0    0    0    0    0
+  Eastern Europe               0    0    0    0    0    1    1    0    0    0    0
+  Former Soviet States         0    1    0    0    0    0    0    0    0    0    1
+  Global West                  0    0    0    0    1    0    0    0    0    0    0
+  Greater Middle East          0    0    0    0    0    0    0    0    1    0    0
+  Latin America & Caribbean    1    0    0    0    0    0    0    0    0    1    0
+  Southern Asia                0    0    0    0    0    0    0    0    0    0    0
+  Sub-Saharan Africa           0    0    1    1    0    0    0    1    0    0    0
+                           
+KNNpred                     90.3 94 95.9 96.8 100
+  Asia-Pacific                 0  0    0    0   0
+  Eastern Europe               0  0    0    1   1
+  Former Soviet States         0  0    0    0   0
+  Global West                  0  1    1    0   0
+  Greater Middle East          0  0    0    0   0
+  Latin America & Caribbean    1  0    0    0   0
+  Southern Asia                0  0    0    0   0
+  Sub-Saharan Africa           0  0    0    0   0
+> contingency.matrix = as.matrix(contingency.table)
+> sum(diag(contingency.matrix))/length(x_test$SPI)
+[1] 0.05454545
+> 
+> contingency.table <- table(KNNpred, x_test$AGR)
+> contingency.table
+                           
+KNNpred                     24.1 28.2 31.4 31.9 34 35.6 37.5 38.6 40.1 41.1 41.6
+  Asia-Pacific                 0    0    0    1  0    0    0    0    0    0    0
+  Eastern Europe               0    0    1    0  0    0    0    0    0    0    0
+  Former Soviet States         1    0    0    0  0    0    0    0    0    0    0
+  Global West                  0    0    0    0  0    0    0    0    0    0    0
+  Greater Middle East          0    1    0    0  0    1    0    0    0    0    0
+  Latin America & Caribbean    0    0    0    0  0    0    1    0    0    0    0
+  Southern Asia                0    0    0    0  0    0    0    0    0    0    0
+  Sub-Saharan Africa           0    0    0    0  1    0    0    1    1    1    1
+                           
+KNNpred                     42.2 42.5 43.5 44.7 45.4 46.1 46.7 47 47.9 49.6 49.7 50
+  Asia-Pacific                 0    1    0    0    0    0    0  1    1    1    0  0
+  Eastern Europe               0    0    0    0    0    0    0  0    0    0    0  0
+  Former Soviet States         0    0    0    0    0    0    1  0    0    0    0  0
+  Global West                  0    0    1    0    0    0    0  0    0    0    1  0
+  Greater Middle East          0    0    0    0    0    0    0  0    0    0    0  0
+  Latin America & Caribbean    0    0    0    0    0    1    0  0    0    0    0  1
+  Southern Asia                0    0    0    0    0    0    0  0    0    0    0  0
+  Sub-Saharan Africa           2    0    0    1    1    0    0  0    0    0    0  0
+                           
+KNNpred                     50.2 50.4 50.6 53.8 55.1 56.7 56.8 57.1 57.2 58.6 58.8
+  Asia-Pacific                 0    0    0    0    0    0    0    0    0    0    0
+  Eastern Europe               0    0    0    0    0    0    0    0    0    0    0
+  Former Soviet States         0    0    0    1    1    0    0    0    0    0    1
+  Global West                  0    0    0    0    0    1    0    0    0    0    0
+  Greater Middle East          0    0    0    0    0    0    0    0    1    0    0
+  Latin America & Caribbean    1    1    0    0    0    0    0    1    0    1    0
+  Southern Asia                0    0    0    0    0    0    0    0    0    0    0
+  Sub-Saharan Africa           0    0    1    0    0    0    1    0    0    0    1
+                           
+KNNpred                     60.9 61.4 62.8 63 65.1 65.3 66.3 68 68.6 69.2 71 71.1
+  Asia-Pacific                 0    0    0  1    1    0    1  0    1    0  0    0
+  Eastern Europe               0    0    1  0    0    0    0  0    0    1  0    0
+  Former Soviet States         0    0    1  0    0    0    0  0    0    0  0    0
+  Global West                  0    1    0  0    0    1    0  1    0    0  1    0
+  Greater Middle East          0    0    0  0    0    0    0  0    0    0  0    0
+  Latin America & Caribbean    1    0    0  0    0    0    0  0    0    0  0    0
+  Southern Asia                0    0    0  0    0    0    0  0    0    0  0    0
+  Sub-Saharan Africa           0    0    0  0    0    0    0  0    0    0  0    1
+                           
+KNNpred                     72.2 72.3 72.5 74 77.8 81
+  Asia-Pacific                 0    0    0  0    1  0
+  Eastern Europe               0    0    1  1    0  0
+  Former Soviet States         0    0    0  0    0  0
+  Global West                  0    1    0  0    0  0
+  Greater Middle East          0    0    0  0    0  0
+  Latin America & Caribbean    0    0    0  0    0  1
+  Southern Asia                0    0    0  0    0  0
+  Sub-Saharan Africa           1    0    0  0    0  0
+> contingency.matrix = as.matrix(contingency.table)
+> sum(diag(contingency.matrix))/length(x_test$AGR)
+[1] 0.01818182
